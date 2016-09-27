@@ -25,8 +25,8 @@
 ### install boost dependency
 	wget http://219.238.7.66/files/31800000083F2519/jaist.dl.sourceforge.net/project/boost/boost/1.61.0/boost_1_61_0.tar.gz
 	tar zxvf boost_1_61_0.tar.gz && cd boost_1_61_0
-	./configure --prefix=/usr
-	sudo make && sudo make install
+	./bootstrap.sh
+	sudo ./b2 threading=multi address-model=64 variant=release stage install
 ### install libevent dependency
 	wget https://github.com/libevent/libevent/releases/download/release-2.0.22-stable/libevent-2.0.22-stable.tar.gz
 	tar zxvf libevent-2.0.22-stable.tar.gz && cd libevent-2.0.22-stable
