@@ -13,6 +13,8 @@
 	sudo zypper install zsh 
 	cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 	chsh -s /bin/zsh
+	# reboot the system
+	sudo shutdown -r now
 	
 ###  Install vundle
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
