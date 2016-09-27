@@ -10,7 +10,7 @@
 ### Install oh-my-zsh
 	cat /etc/shells
 	# 如果系统已经安装zsh则不需要再执行下面的命令安装zsh
-	sudo zypper install 
+	sudo zypper install zsh 
 	cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 	chsh -s /bin/zsh
 	
