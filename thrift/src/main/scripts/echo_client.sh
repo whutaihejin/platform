@@ -8,6 +8,5 @@ for jar in $(ls lib/*.jar); do
     CLASSPATH="$CLASSPATH":$PWD/$jar;
 done
 
-echo "CLASSPATH="$CLASSPATH
-
+echo -e "java -classpath .:config:$CLASSPATH echo.EchoClient"
 java -classpath .:config:$CLASSPATH echo.EchoClient
