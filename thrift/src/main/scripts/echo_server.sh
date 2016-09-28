@@ -1,7 +1,7 @@
 #!/bin/bash
 
 dir=$(dirname $0)
-cd $dir & cd ..
+cd $dir && cd ..
 PWD=$(pwd)
 
 for i in $(ls lib/*.jar);
