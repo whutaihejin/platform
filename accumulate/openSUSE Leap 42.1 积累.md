@@ -27,3 +27,10 @@
 
 ### Install Cmake
 	sudo zypper install cmake
+
+### Install Maven
+	wget http://mirrors.cnnic.cn/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
+	# 解压到/usr/local目录
+	# 设置MAVEN_HOME,更新PATH环境变量
+	export MAVEN_HOME=/usr/local/apache-maven-3.3.9
+	export PATH=$PATH:$MAVEN_HOME/bin
