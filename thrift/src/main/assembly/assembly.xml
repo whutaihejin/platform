@@ -23,6 +23,8 @@
                 <include>echo_server.sh</include>
                 <include>echo_client.sh</include>
             </includes>
+            <lineEnding>unix</lineEnding>
+            <fileMode>0755</fileMode>
         </fileSet>
     </fileSets>
 </assembly>
