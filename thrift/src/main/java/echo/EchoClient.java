@@ -12,7 +12,7 @@ import org.apache.thrift.transport.TTransport;
 public class EchoClient {
 
     public static void main(String[] args) throws Exception {
-        TTransport transport = new TSocket("localhost", 9090);
+        TTransport transport = new TSocket("10.94.106.180", 9090);
         transport.open();
         TProtocol protocol = new TBinaryProtocol(transport);
         EchoService.Client client = new EchoService.Client(protocol);
