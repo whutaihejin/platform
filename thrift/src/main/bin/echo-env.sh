@@ -1,6 +1,6 @@
 #!/bin/bash
 this="${BASH_SOURCE-$0}"
-# 处理链接文件
+# process link file
 while [ -h "$this" ]; do
   info=$(ls -ld "$this")
   link=$(expr "$info" : '.*-> \(.*\)$')
@@ -15,19 +15,19 @@ bin=$(dirname "$this")
 script=$(basename "$this")
 bin=$(cd "$bin" > /dev/null 2>&1; pwd)
 
-# 定义 ECHO_HOME
+# define ECHO_HOME
 export ECHO_HOME=$(dirname "$bin")
 
-# 定义 ECHO_CONF_DIR
+# define ECHO_CONF_DIR
 if [ "$ECHO_CONF_DIR" = "" ]; then
   export ECHO_CONF_DIR="$ECHO_HOME/conf"
 fi
 
-# 定义 WG_CLASSPATH
+# define WG_CLASSPATH
 cp=$(find "$ECHO_HOME/lib" | grep 'jar$' | sort | paste -s -d ':' -)
 export ECHO_CLASSPATH="$cp:$ECHO_CONF_DIR" # 添加 $ECHO_CONF_DIR 以便配置log4j等日志系统
 
-# 定义 ECHO_JAVA_OPTS
+# define ECHO_JAVA_OPTS
 debug_opts=""
 if [ "$ECHO_DEBUG" = "1" -o "$ECHO_DEBUG" = "true" ]; then
   debug_opts="-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005"
