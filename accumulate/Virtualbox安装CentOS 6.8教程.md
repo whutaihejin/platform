@@ -1,4 +1,4 @@
-# CentOS 6.8 virtual安装教程
+# virtualbox 安装CentOS 6.8 教程
 ## 修改/etc/sudoers
 	su -
 	chmod u+w /etc/sudoers
