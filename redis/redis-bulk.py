@@ -30,8 +30,6 @@ latitude = 19.0
 delta = 0.004474
 mount = limit * limit
 
-print limit, batch
-
 # redis client
 r = redis.Redis(host=host_ip, port=6379, db=0)
 #r = redis.StrictRedis(host='10.94.106.180', port=6379, db=0)
@@ -55,7 +53,7 @@ for x in range(0, limit):
       value = (longitude, latitude, address)
       geo_list += value
     r.geoadd(key, *geo_list)
-    print ("%.2f%% %d/%d" % ((count * 100.0 / mount), count, mount)), geo_list
+    print ("%.2f%% %d/%d" % ((count * 100.0 / mount), count, mount))
   longitude += delta
  
 end_time_ms = int(round(time.time() * 1000))
