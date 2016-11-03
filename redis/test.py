@@ -2,7 +2,12 @@
 import sys
 import redis
 import getopt
+import time
 
+def FormatTime():
+  return time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+
+print FormatTime()
 opts, args = getopt.getopt(sys.argv[1:], "hl:", ["help", "limit="])
 limit = 10
 for op, value in opts:

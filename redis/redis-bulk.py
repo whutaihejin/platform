@@ -5,8 +5,11 @@ import time
 import sys
 import getopt
 
+def FormatTime(format_str = '%Y-%m-%d %H:%M:%S'):
+  return time.strftime(format_str, time.localtime(time.time()))
+
 key = "self"
-limit = 7072
+limit = 7072 
 batch = 100
 host_ip = "127.0.0.1"
 port = 6397
@@ -53,7 +56,7 @@ for x in range(0, limit):
       value = (longitude, latitude, address)
       geo_list += value
     r.geoadd(key, *geo_list)
-    print ("%.2f%% %d/%d" % ((count * 100.0 / mount), count, mount))
+    print ("%s done rate %.2f%% detail %d/%d" % (FormatTime(), (count * 100.0 / mount), count, mount))
   longitude += delta
  
 end_time_ms = int(round(time.time() * 1000))
