@@ -19,6 +19,8 @@
 	chsh -s /bin/zsh	
 	# reboot the system
 	sudo shutdown -r now
+## Update system
+	sudo yum update -y
 	
 ## YouCompleteMe
 	git submodule update --init --recursive
