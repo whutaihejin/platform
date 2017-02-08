@@ -1,5 +1,8 @@
 VPATH = src
-CPPFLAGS = -I include
+#CPPFLAGS = -I include
+
+vpath %.c src
+vpath %.h include
 
 count_words: count_words.o counter.o lexer.o -lfl 
 	gcc $^ -o $@
