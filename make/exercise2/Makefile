@@ -1,5 +1,5 @@
 # -lfl
-count_words: count_words.o lexer.o 
+count_words: count_words.o lexer.o -lfl 
 	gcc count_words.o lexer.o -lfl -o count_words
 
 count_words.o: count_words.c
