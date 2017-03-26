@@ -1,3 +1,4 @@
+	ls 
 count_words: count_words.o lexer.o -lfl
 	gcc count_words.o lexer.o -lfl -o count_words
 
