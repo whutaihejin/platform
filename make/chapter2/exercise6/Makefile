@@ -1,4 +1,3 @@
-CXXFLAGS = -I include
 CFLAGS = -I include
 
 vpath %.c src
