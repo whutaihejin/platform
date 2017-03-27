@@ -1,4 +1,4 @@
-VPATH = src include
+VPATH = src 
 CXXFLAGS = -I include
 
 count_words: count_words.o counter.o lexer.o -lfl
