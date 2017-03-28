@@ -10,6 +10,8 @@ test_subst:
 	@echo "objects:" $(objects_test)
 
 dir_path := /test/output/target/
+words_content := "test output target"
 test_patsubst:
 	@echo "patsubst:" $(patsubst %/,%, $(dir_path))
-	@echo "patsubst:" $(dir_path:%/=%)
+	@echo "patsubst2:" $(dir_path:%/=%)
+	@echo "words:" $(words $(words_content))
