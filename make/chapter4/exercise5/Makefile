@@ -14,6 +14,13 @@ source-dirs := $(sort $(dir $(shell find . -name '*.c')))
 extrieve-dirs = $(sort 														\
 									$(dir 													\
 										$(shell find $1 -name '*.c')))
+
+source-files := $(sort $(notdir $(shell find . -name '*.h')))
+extrieve-files = $(sort 													\
+										$(notdir 											\
+											$(shell find . -name '*.h')))
 test_dir:
 	@echo ---$(source-dirs)---
 	@echo ---$(call extrieve-dirs,.)---
+	@echo ---source-files: $(source-files)---
+	@echo ---source-files 2: $(call extrieve-files,.)---
