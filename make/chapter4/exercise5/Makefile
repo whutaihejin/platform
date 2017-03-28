@@ -1,5 +1,5 @@
 .PHONY: all
-all: test_wildcard
+all: test_wildcard test_dir
 
 vim_exists := $(wildcard ~/.vimrc)
 not_exists := $(wildcard ~/.testrc)
@@ -10,3 +10,10 @@ test_wildcard:
 	@echo --$(dir /home/taihejin/ll.v /home/ll/vim.v)--
 	@echo --$(notdir /home/taihejin/ll.v /home/ll/vim.v)--
 
+source-dirs := $(sort $(dir $(shell find . -name '*.c')))
+extrieve-dirs = $(sort 														\
+									$(dir 													\
+										$(shell find $1 -name '*.c')))
+test_dir:
+	@echo ---$(source-dirs)---
+	@echo ---$(call extrieve-dirs,.)---
