@@ -6,7 +6,7 @@ test_suffix:
 	@echo ---suffix: $(suffix $(file_list)) 
 	@echo ---basename: $(basename $(file_list)) 
 
-letters := $(foreach letter,a b c d e,$(letter))
+letters := $(foreach letter,a b c d e,-$(letter)-)
 show-words:
 	# letters has $(words $(letters)) words: '$(letters)'
 
