@@ -12,4 +12,4 @@ show-words:
 
 var_list := SOURCES OBJECTS HOME
 test_foreach:
-	$(foreach i,$(var_list), $(if $($(i),,$(shell echo $i has no value > /dev/stderr)))
+	$(foreach i,$(var_list), $(if $($i),,$(shell echo $i has no value > /dev/stderr)))
