@@ -7,6 +7,7 @@ set tabstop=2
 set shiftwidth=2
 let do_syntax_sel_menu=1
 set backspace=2
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 " set completeopt=longest,menu	"让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
 "syntax on
 colorscheme ron
